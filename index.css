@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.main_app {
+  height: 60vh;
+  width: 60vw;
+}
+.header_container {
+  height: 10%;
+  width: 60%;
+}
+.search_container {
+  height: 15%;
+  width: 60%;
+}
+.info_container {
+  height: 25%;
+  width: 60%;
+}
+.input{
+  border: none;
+}
+.textarea{
+  resize: none;
+  border: none;
+}
+.center{
+  justify-content: center;
+  align-items: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column; 
+}
+.flexRow {
+  display: flex;
+  flex-direction: row; 
+}
+.div_borders{
+  border: 1px solid black;
+}
+.e_red{
+  color: red;
+}
+.e_orange{
+  color: orange;
+}
+.e_black{
+  color: black;
+}
+.e_green{
+  color: green;
+}
+.e_blue{
+  color: blue;
+}
