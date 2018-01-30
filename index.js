@@ -56,11 +56,11 @@ class GithubDataApp extends React.Component{
             this.setState({searchData: response.data})            
             tempScore = response.data.followers + response.data.public_repos
 
-            // if(in_name !== response.data.name){
-            //     tempError = "User does not exist, pick a different Github username!"
-            //     tempStyle = "textarea e_black"
-            // }else 
-            if(tempScore < 20){
+            if(response.data.name === null){
+                tempScore = ""
+                tempError = "Username found is null, pick a different Github username!"
+                tempStyle = "textarea e_black"
+            }else if(tempScore < 20){
                 // use joe
                 tempError = "Needs Work!"
                 tempStyle = "textarea e_red"
@@ -111,7 +111,7 @@ class GithubDataApp extends React.Component{
                 <div className="flex_row">
                     <label>Your Score: <input readOnly  className="input" type="text" cols="35" rows="3"/>{this.state.ghScore}</label>
                     <input readOnly  className="input" type="text"/>
-                    <textarea disabled readOnly className={this.state.textArea} cols="30" rows="1" value={this.state.ghError}/>
+                    <textarea disabled readOnly className={this.state.textArea} cols="35" rows="3" value={this.state.ghError}/>
                 </div>
             </div>
         </div>
